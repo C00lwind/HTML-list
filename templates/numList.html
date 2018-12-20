@@ -1,0 +1,37 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>界面</title>
+<link rel="stylesheet" href={% static "bootstrap-3.3.7-dist/css/bootstrap.min.css"%}/>
+{#<link rel="stylesheet" href={% static " bootstrap.css"%}>#}
+<style media="screen">
+.table{text-align: center;}
+</style>
+
+</head>
+<body>
+
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<td>姓名</td>
+		<td>住址</td>
+		<td>邮箱</td>
+		<td>电话</td>
+		<td>QQ</td>
+		<td>操作</td>
+	</tr>
+	<tr>
+		<td colspan="5" class="danger"><button class="btn btn-primary btn-sm">增加</button></td>
+	</tr>
+</table>
+  
+<script src={% static "jquery.min.js"%}></script>
+<script src={% static "table.js"%}></script>
+<div style="text-align:center;">
+
+</div>
+</body>
+</html>

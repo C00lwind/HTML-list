@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href={% static "bootstrap-3.3.7-dist/css/bootstrap.min.css" %}/>
+    <link type="text/css" rel="stylesheet" href={% static "login.css" %}>
+    <script language="JavaScript" type="text/javascript" src={% static "initial.js"%}></script>
+    <script src={% static "jquery-3.3.1.js"%} type="text/javascript"></script>
+</head>
+<body style="background-image:url({% static "timg.jpg"%})">
+<div class="login_square" >
+    <div>
+        <form action="/initial/" name="log_form" method="POST">
+            {% csrf_token %}
+            <table width="250px">
+                <tr>
+                    <td><b>用户名：</b></td>
+                    <td>
+                        <input type="text" name="user" value=""/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>密码：</b></td>
+                    <td>
+                        <input type="password" name="key" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!--<input class="btn btn-primary login_button" type="button" name="login" value="登陆" onclick="check()"/>-->
+                    </td>
+                </tr>
+            </table>
+            <a href="/" type="button"><input class="btn btn-primary login_button" type="submit" value="提交" onclick="check()"/></a>
+        </form>
+    </div>
+{#    <div >#}
+{#        <a href="/" type="button"><input class="btn btn-primary login_button" type="submit" value="提交" onclick="check()"/></a>#}
+{#    </div>#}
+</div>
+</body>
+</html>
